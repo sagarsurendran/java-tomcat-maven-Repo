@@ -4,9 +4,13 @@ pipeline {
         stage ('BUILD AND PACKAGE') {
             steps{
 	    	echo 'build package'
-	    
-            }
-        }
+                 }
+        post {
+	success {
+		echo ' Archive the build'
+		}
+	     }
+	}
 	
         
     }
