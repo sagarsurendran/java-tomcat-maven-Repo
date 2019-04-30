@@ -11,7 +11,12 @@ pipeline {
               powershell 'mvn clean package'
             }
         }
-		
+	stage ('Call Powershell Script')
+{
+    node ('MyWindowsSlave') {
+        PowerShell(". '.\\disk-usage.ps1'") 
+    }
+}	
         
     }
 }
