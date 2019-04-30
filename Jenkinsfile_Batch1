@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('BUILD AND PACKAGE') {
             steps{
-              powershell 'mvn clean package'
+              bat 'mvn clean package'
             }
         }
 		
