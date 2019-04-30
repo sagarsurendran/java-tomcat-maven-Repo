@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage ('BUILD AND PACKAGE') {
+            steps{
+              build 'Batch1'
+            }
+        }
+		stage ('QA DEPLOY') {
+            steps{
+              build 'Batch2'
+            }
+        }
+        stage ('PROD DEPLOY') {
+            steps{
+              build 'Batch3'
+            }
+        }
+    }
+}
