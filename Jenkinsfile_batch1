@@ -12,7 +12,7 @@ stages{
               success{
                echo 'Arching the build'
                
-               archiveArtifacts ''
+               archiveArtifacts '**/*.war'
               
               }
               
