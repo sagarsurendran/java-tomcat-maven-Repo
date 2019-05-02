@@ -4,19 +4,18 @@ pipeline {
         stage('Build') { 
             steps {
 			build : 'Batch1_Learn'
+			}
 
         }
 		stage('QA DEPLOY') { 
             steps {
 			build : 'Batch2_Learn'
-
+			}
         }
 		stage('PROD DEPLOY') { 
             steps {
 			build : 'Batch3_Learn'
 		}
-		}
-		}
-		}
-		}
-		}
+	}
+  }
+}
